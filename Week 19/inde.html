@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="number1" value="6">
+    <input type="text" id="number2" value="7">
+    <div class="move">
+        <input type="button" value="+" id="plus" onclick="plus()">
+        <input type="button" value="-" id="minus" onclick="minus()">
+        <input type="button" value="*" id="multiplication" onclick="multiplication()">
+        <input type="button" value="/" id="division" onclick="division()">
+    </div>
+    <div id="result"></div>
+
+
+    <script>
+        class Article {
+            constructor(number) {
+
+                this.number = number;
+            }
+
+            static compare(articleA, articleB) {
+                return articleA.number - articleB.number;
+            };
+
+            static compare1(articleA, articleB) {
+                document.getElementById('result').innerHTML = Number(articleA.number + articleB.number);
+            };
+
+
+        }
+
+        // использование
+        let articles = [
+            new Article(Number(document.getElementById(`number1`).value)),
+            new Article(Number(document.getElementById(`number2`).value))
+        ];
+
+        articles.sort(Article.compare1);
+        Article.compare1;
+    </script>
+</body>
+
+</html>

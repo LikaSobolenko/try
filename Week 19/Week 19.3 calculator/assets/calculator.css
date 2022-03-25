@@ -1,0 +1,22 @@
+body {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1420px;
+    text-align: center;
+}
+
+input {
+    margin: 25px;
+}
+
+div {
+
+    text-align: center;
+}
+
+#result {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 100px;
+    border-top: 2px solid rgb(3, 3, 3);
+}

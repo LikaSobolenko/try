@@ -1,0 +1,19 @@
+body {
+    max-width: 760px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+.fio {
+    margin-top: 5px;
+}
+
+input:required:valid,
+select:required:valid {
+    border-color: rgb(0, 255, 0);
+}

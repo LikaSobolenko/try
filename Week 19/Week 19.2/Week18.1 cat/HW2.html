@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/hw2.css">
+    <title>Опросник</title>
+
+    <link rel="shortcut icon"
+        href="https://img-premium.flaticon.com/png/512/2229/2229675.png?token=exp=1633172293~hmac=8610a4af67e07e751a9c9ab2df74e373"
+        type="image/svg">
+    <style>
+
+    </style>
+
+
+</head>
+
+<body>
+    <h1>Добро пожаловать в клинику для ухода за кошачьими "Мягкие лапки"</h1>
+    <img src="https://kotopediya.su/wp-content/uploads/2017/10/cat-1-86.jpg" width="534" height="300"
+        alt="пять котят сидят на спинке дивана" />
+    <h2>Пожалуйста, заполните анкету</h2>
+    <form>
+        <div>
+            <fieldset>
+                <legend>Ваши контактные данные:</legend>
+                <div class="fio">
+                    <label for="fistname">Имя</label>
+                    <input type="text" id="firstname" placeholder="Имя" maxlength="20" required />*
+                </div>
+                <div class="fio">
+                    <label for="secondname">Отчество</label>
+                    <input type="text" id="secondname" placeholder="Отчество" maxlength="20" required />
+                </div>
+                <div class="fio">
+                    <label for="lastname">Фамилия</label>
+                    <input type="text" id="lastname" placeholder="Фамилия" maxlength="20" required />*
+                </div>
+                <div class="fio">
+                    <label for="animalname">Имя вашего питомца</label>
+                    <input type="text" id="petsname" placeholder="Имя питомца" maxlength="20" required />
+                </div>
+                <div class="fio">
+                    <label for="phone">Номер телефона</label>
+                    <input type="tel" id="tel" placeholder="+7-***-***-**-**" pattern="/(?:\+|\d)[\d\-\(\) ]{9,}\d/g"
+                        min="9" max="20" required />*
+                </div>
+            </fieldset>
+        </div>
+
+        <p>Пол питомца:</p>
+        <div>
+            <input type="radio" name="sex" value="male" id="malesex">
+            <label for="malesex">Мужской</label>
+
+            <input type="radio" name="sex" value="female" id="femalesex">
+            <label for="femalesex">Женский</label>
+
+            <p>Выберите породу:</p>
+            <select required id="breed">*
+                <option value="Британская короткошерстная">Британская короткошерстная</option>
+                <option value="Бенгальская кошка">Бенгальская кошка</option>
+                <option value="Абиссинская кошка">Абиссинская кошка</option>
+                <option value="Сиамская кошка">Сиамская кошка</option>
+                <option value="Норвежский лесной кот">Норвежский лесной кот</option>
+                <option value="Турецкая ангора">Турецкая ангора</option>
+                <option value="Сококе, соукок">Сококе, соукок</option>
+            </select>
+
+            <p>Чем питается:</p>
+            <div>
+                Сухой корм <input type="checkbox" name="foodtype" value="Сухой корм" />
+            </div>
+            <div>
+                Консервированный корм <input type="checkbox" name="foodtype" value="Консервированный корм" />
+            </div>
+            <div>
+                Влажный корм <input type="checkbox" name="foodtype" value="Влажный корм" />
+            </div>
+            <div>
+                Премиум <input type="checkbox" name="foodtype" value="Премиум" />
+            </div>
+
+            <p>Ваш комментарий:</p>
+            <div><textarea rows="5" cols="100" maxlength="200" id="comment"></textarea></div>
+            <p>Фотография питомца:</p>
+            <div>
+                <input type="file" />
+            </div>
+            <p><button id="button" onclick="save()">Сохранить</button></p>
+            <div class="fio">Спасибо, мы свяжемся с вами в ближайшее время!</div>
+
+
+    </form>
+
+    <script src="./assets/hw2.js">
+
+    </script>
+</body>
+
+</html>
